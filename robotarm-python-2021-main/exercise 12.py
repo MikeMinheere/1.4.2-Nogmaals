@@ -2,14 +2,14 @@ from RobotArm import RobotArm
 
 robotArm = RobotArm('exercise 12')
 robotArm.speed = 2
-for i in range(0,15):
+for i in range(0,9):
     robotArm.grab()
     color = robotArm.scan()
     if color == 'red':
-        for i in range(0,9):
+        for x in range(0,9):
             robotArm.moveRight()
         robotArm.drop()
-        for i in range(0,8):
+        for x in range(0,9-i):
             robotArm.moveLeft()
     else:robotArm.drop()
     robotArm.moveRight()
